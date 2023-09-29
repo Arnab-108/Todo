@@ -29,7 +29,7 @@ authRouter.post("/login",async(req,res)=>{
     const {email,password} = req.body
     try {
         const user = await authModel.findOne({email:email})
-        console.log(user.password)
+        // console.log(user.password)
         if(user){
             bcrypt.compare(password,user.password,(err,result)=>{
                 if(result){

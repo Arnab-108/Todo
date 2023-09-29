@@ -25,6 +25,16 @@ todoRouter.get("/" , async(req,res)=>{
       }
 })
 
+todoRouter.get('/:id',async(req,res)=>{
+    const {id}=req.params;
+    try {
+        const data=await todoModel.findOne({_id:id});
+        res.send(data);
+    } catch (error) {
+        res.send({"msg":error.message});
+    }
+})
+
 todoRouter.patch("/:id", async(req,res)=>{
     const {id} = req.params
     const user = await todoModel.findOne({_id:id})
