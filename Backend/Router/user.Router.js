@@ -36,6 +36,7 @@ authRouter.post("/login",async(req,res)=>{
                     let token = jwt.sign({user_Id:user._id , user: user.name},"todo",{
                         expiresIn:"7d"
                     })
+                    console.log(token)
                     res.status(200).send({success:true , msg:"Login Successfull!" , token:token , user:user})
                 }
                 else{
