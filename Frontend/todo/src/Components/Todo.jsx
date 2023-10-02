@@ -30,6 +30,7 @@ const Todo = () => {
   const token = localStorage.getItem("token")
   const name = localStorage.getItem("user")
   const toast = useToast();
+  
   const navigate = useNavigate()
   useEffect(() => {
     getData()
@@ -194,7 +195,7 @@ const Todo = () => {
         </TableContainer>
       </div>
       </> :
-      alert("Login First")
+      alert("Login First" , navigate("/"))
     }
     </>
   );
