@@ -84,7 +84,7 @@ const Todo = () => {
       }
     }).then((res) => {
       toast({
-        title: `Todo Removed!`,
+        title: `Task Removed!`,
         status: "error",
         duration: 1000,
         isClosable: true,
