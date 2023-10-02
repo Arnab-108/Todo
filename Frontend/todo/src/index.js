@@ -5,12 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter } from "react-router-dom";
+// import { createClient } from "@supabase/supabase-js"
+// import { SessionContextProvider } from "@supabase/auth-helpers-react"
+// const supabase = createClient(
+//   "https://eyhsiynxxtidhqbnniuk.supabase.co",
+//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5aHNpeW54eHRpZGhxYm5uaXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU5OTcxNDksImV4cCI6MjAxMTU3MzE0OX0.CoEjDNeEn8hHVzKQEJNIU8FPsXqRlOLcNy46wRrbYWg"
+// )
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
+    {/* <SessionContextProvider supabaseClient={supabase}> */}
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    {/* </SessionContextProvider> */}
   </BrowserRouter>
 );
 
